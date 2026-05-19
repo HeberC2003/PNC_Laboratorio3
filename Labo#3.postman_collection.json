@@ -1,0 +1,237 @@
+{
+  "info": {
+    "_postman_id": "2db47a65-a79b-43a4-ae7b-cca84a695622",
+    "name": "Labo#3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54513271",
+    "_collection_link": "https://go.postman.co/collection/54513271-2db47a65-a79b-43a4-ae7b-cca84a695622?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Specimen",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Bokoblin\",\r\n    \"region\": \"Campo de Hyrule\",\r\n    \"dangerLevel\": 3,\r\n    \"isFriendly\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Specimens",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/getAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Specimens Paginated",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/getAll?page=0&size=2&sortBy=dangerLevel&sortOrder=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "getAll"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "2"
+            },
+            {
+              "key": "sortBy",
+              "value": "dangerLevel"
+            },
+            {
+              "key": "sortOrder",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Specimens Page 2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/getAll?page=1&size=2&sortBy=dangerLevel&sortOrder=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "getAll"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "size",
+              "value": "2"
+            },
+            {
+              "key": "sortBy",
+              "value": "dangerLevel"
+            },
+            {
+              "key": "sortOrder",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Specimen By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/getBy/1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "getBy",
+            "1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Specimen Not Found 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/getBy/00000000-0000-0000-0000-000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "getBy",
+            "00000000-0000-0000-0000-000000000000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Specimen",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Bokoblin Rojo\",\r\n    \"region\": \"Castillo de Hyrule\",\r\n    \"dangerLevel\": 7,\r\n    \"isFriendly\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/update/1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "update",
+            "1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Specimen",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/specimen/delete/1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "specimen",
+            "delete",
+            "1313a97b-f6c3-4c1c-8a6c-12d6ce79ea6e"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
